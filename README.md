@@ -69,13 +69,13 @@ along with allowing mentors to leave feedback for students.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="https://imgur.com/a/EtILniF" width=600>
+<img src="https://github.com/Mentor2Mentee/Mentor2Mentee-App/blob/main/Screen%20Shot%202021-10-18%20at%2010.27.39%20PM.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://imgur.com/a/tYGqhVJ" height=200>
+<img src="https://github.com/Mentor2Mentee/Mentor2Mentee-App/blob/main/Screen%20Shot%202021-10-18%20at%2010.16.17%20PM.png" height=200>
 
 ### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+<img src="https://github.com/Mentor2Mentee/Mentor2Mentee-App/blob/main/m2m.gif" width=200>
 
 
 ## Schema 
