@@ -77,30 +77,56 @@ along with allowing mentors to leave feedback for students.
 ### [BONUS] Interactive Prototype
 <img src="https://github.com/Mentor2Mentee/Mentor2Mentee-App/blob/main/m2m.gif" width=200>
 
-Networking
-List of network requests by screen
-Home Feed Screen
-(Read/GET) Query all posts where user is author
-let query = PFQuery(className:"Post")
-query.whereKey("author", equalTo: currentUser)
-query.order(byDescending: "createdAt")
-query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-   if let error = error { 
-      print(error.localizedDescription)
-   } else if let posts = posts {
-      print("Successfully retrieved \(posts.count) posts.")
-  // TODO: Do something with posts...
-   }
+### Networking
+
+* Create User
+```
+public void createUser() {
+  ParseUser user = new ParseUser();
+  user.setUsername("my name");
+  user.setPassword("my pass");
+  user.setEmail("email@example.com");
+
+  // Other fields can be set just like any other ParseObject,
+  // using the "put" method, like this: user.put("attribute", "its value");
+  // If this field does not exists, it will be automatically created
+
+  user.signUpInBackground(e -> {
+    if (e == null) {
+        // Hooray! Let them use the app now.
+    } else {
+        // Sign up didn't succeed. Look at the ParseException
+        // to figure out what went wrong
+        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+    }
+  });
 }
-(Create/POST) Create a new like on a post
-(Delete) Delete existing like
-(Create/POST) Create a new comment on a post
-(Delete) Delete existing comment
-Create Post Screen
-(Create/POST) Create a new post object
-Profile Screen
-(Read/GET) Query logged in user object
-(Update/PUT) Update user profile image
+```
+* Login
+   * User can login or create an account with email and password
+
+```
+public void loginUser() {
+  ParseUser.logInInBackground("<userName>", "<password>", (user, e) -> {
+    if (user != null) {
+        // Hooray! The user is logged in.
+    } else {
+        // Login failed. Look at the ParseException to see what happened.
+        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+    }
+  });
+}
+```
+
+* Home
+   * User can see a dashboard with their mentor and bar to navigate between different screens
+    * Pull picture
+    * Pull User
+    * 
+ * Chat
+   * User can message their mentor and receive messages from their mentor
+ * Mentor Select
+   * User can swipe left or right between mentor selections and choose mentors that are compatible
 
 
 ## Schema 
