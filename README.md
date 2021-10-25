@@ -130,6 +130,17 @@ public void loginUser() {
 
 
 ## Schema 
+| Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | username      | String   | unique id for user |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | messages      | String   | conversation shared between parties |
+   | likesMatch    | Bool     | did the user swipe to connect to mentor or not|
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
 [This section will be completed in Unit 9]
 ### Models
 [Add table of models]
