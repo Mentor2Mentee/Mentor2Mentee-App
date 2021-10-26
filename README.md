@@ -120,14 +120,48 @@ public void loginUser() {
 
 * Home
    * User can see a dashboard with their mentor and bar to navigate between different screens
-    * Pull picture
-    * Pull User
+   * Pull picture
+```
+ParseFile image = post.getImage();
+            if (image != null) {
+                Glide.with(context).load(post.getImage().getUrl()).into(ivImage);
+
+
+            }
+```
+  * Pull User
+ ```
+ public ParseUser getUser() {
+        return getParseUser(KEY_USER);
+    }
+ ```
+    
     * 
  * Chat
    * User can message their mentor and receive messages from their mentor
- * Mentor Select
-   * User can swipe left or right between mentor selections and choose mentors that are compatible
-
+   ```
+   ibSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String data = etMessage.getText().toString();
+                ParseObject message = ParseObject.create("Message");
+                message.put(USER_ID_KEY, ParseUser.getCurrentUser().getObjectId());
+                message.put(BODY_KEY, data);
+                message.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                    	    Toast.makeText(ChatActivity.this, "Successfully created message on Parse",
+                            Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.e(TAG, "Failed to save message", e);
+                        }
+                    }
+                });
+                etMessage.setText(null);
+            }
+        });
+   ```
 
 ## Schema 
 | Property      | Type     | Description |
