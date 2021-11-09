@@ -30,11 +30,11 @@ along with allowing mentors to leave feedback for students.
 
 **Required Must-have Stories**
 
-* User can create profile
-* User can log in
-* Users can swipe left or right to choose a mentor from a list of mentors
-* User can view his/her profile page
-* User can chat with mentor
+[x] User can create profile
+[x] User can log in
+[x] Users can swipe left or right to choose a mentor from a list of mentors
+[] User can view his/her profile page
+[] User can chat with mentor
 
 **Optional Nice-to-have Stories**
 
