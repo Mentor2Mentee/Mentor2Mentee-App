@@ -33,7 +33,7 @@ along with allowing mentors to leave feedback for students.
 [x] User can create profile
 [x] User can log in
 [x] Users can swipe left or right to choose a mentor from a list of mentors
-[] User can view his/her profile page
+[x] User can view his/her profile page
 [] User can chat with mentor
 
 **Optional Nice-to-have Stories**
