@@ -34,7 +34,7 @@ along with allowing mentors to leave feedback for students.
 [x] User can log in
 [x] Users can swipe left or right to choose a mentor from a list of mentors
 [x] User can view his/her profile page
-[] User can chat with mentor
+[x] User can chat with mentor
 
 **Optional Nice-to-have Stories**
 
